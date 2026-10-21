@@ -156,7 +156,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            --platform linux/amd64 \
+            --platform linux/arm64 \
             -t ${{ vars.ACR_LOGIN_SERVER }}/${{ matrix.image }}:${{ github.sha }} \
             ./${{ matrix.service }}
 
